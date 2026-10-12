@@ -47,7 +47,7 @@ or one entry deleted, fails. CI regenerates `results/` and fails on any byte cha
 | Governance Envelope (p. 9) | action, action trace, context metadata; bound to agent, session, mandate; protected against alteration | `Envelope`, signed by the registered agent key; any change after signing → Deny |
 | Envelope not self-verifying (p. 9) | check against records captured independently of the agent | Gravit Verifier over signed system records; ≥ 2 independent operators per required step |
 | Agent Identity (p. 10) | verify against the registry before any other evaluation; failure rejected and logged | registry lookup + signature check first; Deny with reason, logged |
-| Controls Repository (p. 10) | machine-readable, versioned controls | `Mandate`, logged with its SHA3-256 |
+| Controls Repository (pp. 10–11) | configurable rulebook; mandates in machine-readable form | `Mandate` (machine-readable), logged with its SHA3-256 |
 | Disposition Engine (pp. 11–12) | Deny / Escalate / Auto-Execute / Observe, specific reason recorded | all four, deterministic, rules applied and basis recorded |
 | Audit Log (pp. 12–13) | tamper-evident, append-only; envelope, mandate, outcome, rules, basis, time per stage | hash-chained entries with all of these; signed export; offline verification |
 | Multi-step workflows (p. 13) | no authority carried into the next step | each envelope evaluated independently |
