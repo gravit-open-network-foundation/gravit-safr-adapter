@@ -1,0 +1,61 @@
+{
+ "auditor_check_of_tampered_copy": {
+  "ok": false,
+  "reason": "chain broken at entry 5"
+ },
+ "auditor_offline_check": {
+  "entries": 8,
+  "head": "8dea200285837a009e2354674b0c6139315049824a9ee9d8ebad633b18205b3d",
+  "ok": true
+ },
+ "scenarios": [
+  {
+   "basis": "first payment by this agent to 'SUPPLIER-0042'",
+   "envelope": "env-001",
+   "outcome": "Observe",
+   "scenario": "First payment to a supplier, checks corroborated"
+  },
+  {
+   "basis": "within mandate; every required check independently corroborated",
+   "envelope": "env-002",
+   "outcome": "Auto-Execute",
+   "scenario": "Repeat payment, checks corroborated"
+  },
+  {
+   "basis": "amount 250000.0 exceeds mandate limit 100000",
+   "envelope": "env-003",
+   "outcome": "Deny",
+   "scenario": "Amount above the mandate limit"
+  },
+  {
+   "basis": "identity: agent not in registry",
+   "envelope": "env-004",
+   "outcome": "Deny",
+   "scenario": "Agent not in the registry"
+  },
+  {
+   "basis": "identity: envelope signature does not verify against the registered agent key",
+   "envelope": "env-005",
+   "outcome": "Deny",
+   "scenario": "Envelope altered after signing"
+  },
+  {
+   "basis": "trace steps not independently corroborated: ['s2', 's3']",
+   "envelope": "env-006",
+   "outcome": "Escalate",
+   "scenario": "Trace claims checks no system recorded (fabricated trace)"
+  },
+  {
+   "basis": "trace steps not independently corroborated: ['s2', 's3']",
+   "envelope": "env-007",
+   "outcome": "Escalate",
+   "scenario": "Each check confirmed by only one source"
+  },
+  {
+   "basis": "amount 60000.0 above autonomous threshold 50000",
+   "envelope": "env-008",
+   "outcome": "Escalate",
+   "scenario": "Above the autonomous threshold, checks corroborated"
+  }
+ ]
+}

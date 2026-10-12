@@ -1,0 +1,885 @@
+{
+ "entries": [
+  {
+   "body": {
+    "basis": "first payment by this agent to 'SUPPLIER-0042'",
+    "corroboration": [
+     {
+      "decision_id": "58cd7d648b701890",
+      "kind": "kyc_check",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s2"
+     },
+     {
+      "decision_id": "ec0c5a7383bed07b",
+      "kind": "sanctions_screening",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 12000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "qpEPgghISY4JU8/9UMclxSumsO86hJtFgw4yqEFlK5IE1R0L33OSg/gBnifUSuNIj89O/nasijHRlwnoy385Dw==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-001",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "939ecf4b1c2473a9615ef2c0565bdbde24092eb4838f1e8dc5482b8e7d793c11",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Observe",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION",
+     "CTRL-NOVELTY"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "decision_id": "58cd7d648b701890",
+        "kind": "kyc_check",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s2"
+       },
+       {
+        "decision_id": "ec0c5a7383bed07b",
+        "kind": "sanctions_screening",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Observe",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "087a4cbda974b41521da912efb2cfb613b80d8075cf87ba333cf84c2b3a2ae50",
+   "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+   "seq": 0
+  },
+  {
+   "body": {
+    "basis": "within mandate; every required check independently corroborated",
+    "corroboration": [
+     {
+      "decision_id": "15f91b2ae29b1934",
+      "kind": "kyc_check",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s2"
+     },
+     {
+      "decision_id": "8599034910bf6748",
+      "kind": "sanctions_screening",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 8000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "L1NEVccILn3FFVzrZ7sachYvrq+z5pQ6Si4Dfymt7JhdjuQ4Bd5iPZoSAH6/CjHJG8Zu2DHzHCNXE9L4THl4DQ==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-002",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "b18bc9f98e14295a4046ccbe94aad66aa767e706cb7a00712296054380f9f00f",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Auto-Execute",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "decision_id": "15f91b2ae29b1934",
+        "kind": "kyc_check",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s2"
+       },
+       {
+        "decision_id": "8599034910bf6748",
+        "kind": "sanctions_screening",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Auto-Execute",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "57d9d4adae0242125c5a90820b48565f77561c878153b20779cd770a6e0d21d1",
+   "prev_hash": "087a4cbda974b41521da912efb2cfb613b80d8075cf87ba333cf84c2b3a2ae50",
+   "seq": 1
+  },
+  {
+   "body": {
+    "basis": "amount 250000.0 exceeds mandate limit 100000",
+    "corroboration": null,
+    "envelope": {
+     "action": {
+      "amount": 250000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "53dpt+IHTa//BWVuSx8vSXUT3kwQp70LQ4ilUKOKS7Y+0CUAYo7hiV9Z3H9Qg5ePzM+S7FphjSanLIGdLLqLDA==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-003",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "6d2854177ca47acc1744c27817b7bd33d19b7758c214c8b61175627885393b49",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Deny",
+    "rules_applied": [
+     "CTRL-MAX-AMOUNT"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "outcome": "Deny",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "dd7f4b45e75162a564b6ae16455e7481962018e6cae9676b7e7634d1efd045e8",
+   "prev_hash": "57d9d4adae0242125c5a90820b48565f77561c878153b20779cd770a6e0d21d1",
+   "seq": 2
+  },
+  {
+   "body": {
+    "basis": "identity: agent not in registry",
+    "corroboration": null,
+    "envelope": {
+     "action": {
+      "amount": 5000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "unknown-agent-99",
+     "agent_signature": "+keFUTSCSJsa+cXpuPpCkkfJ6/PIVnmn7ZIBbQh/qObDt+LqN3jiimEt2+JzPgDaIRUGGpz8kSj5VJuHG2IMBg==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-004",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "691bfc1bc998a1b6be8fb9d609a7d137141c9ce5ac52b0f3249cc5eb6e6a6e33",
+    "mandate": null,
+    "outcome": "Deny",
+    "rules_applied": [
+     "SAFR-IDENTITY"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": false,
+      "stage": "agent_identity"
+     },
+     {
+      "outcome": "Deny",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "abaf2a9f21829c3fdd167dd03c3f0ac7a4840885c7a8aba1e8e4f14e2a06b093",
+   "prev_hash": "dd7f4b45e75162a564b6ae16455e7481962018e6cae9676b7e7634d1efd045e8",
+   "seq": 3
+  },
+  {
+   "body": {
+    "basis": "identity: envelope signature does not verify against the registered agent key",
+    "corroboration": null,
+    "envelope": {
+     "action": {
+      "amount": 95000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "GXDN9gfCkii6wlznmPWQ66V/SHGIH5EdChhHawIxpPpD0gx09hZF2Jj+1eUqxQHC+q0xh1dnIUtvjzxRAr/ADA==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-005",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "bfc96f673652696b5e2a5ac39ac7bb1e436cac63965f63ff69ee3d85010d60e0",
+    "mandate": null,
+    "outcome": "Deny",
+    "rules_applied": [
+     "SAFR-IDENTITY"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": false,
+      "stage": "agent_identity"
+     },
+     {
+      "outcome": "Deny",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "d74bbd228f195bc54312e36decc3658b2ecfbec822184df5d086b5a813bdc9b6",
+   "prev_hash": "abaf2a9f21829c3fdd167dd03c3f0ac7a4840885c7a8aba1e8e4f14e2a06b093",
+   "seq": 4
+  },
+  {
+   "body": {
+    "basis": "trace steps not independently corroborated: ['s2', 's3']",
+    "corroboration": [
+     {
+      "decision_id": "a404e9abf45456b8",
+      "kind": "kyc_check",
+      "records_bound": 0,
+      "records_offered": 0,
+      "state": null,
+      "status": "REJECTED",
+      "step_id": "s2"
+     },
+     {
+      "decision_id": "07c95009c1b03dc4",
+      "kind": "sanctions_screening",
+      "records_bound": 0,
+      "records_offered": 0,
+      "state": null,
+      "status": "REJECTED",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 7000,
+      "counterparty": "SUPPLIER-0077",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0077",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0077",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0077",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "BqR0Uk6zZ9GgD5RpZ+EUwOM730pquhUlYLaLgH4awMTZJXd7wex+cX2gu78v0uk12Lb/xYopaHFiRSEuREprCA==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-006",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "05cb94c453240e1057901b75e31440797582940a29f3e58b9ee5fb72c469f63d",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Escalate",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "decision_id": "a404e9abf45456b8",
+        "kind": "kyc_check",
+        "records_bound": 0,
+        "records_offered": 0,
+        "state": null,
+        "status": "REJECTED",
+        "step_id": "s2"
+       },
+       {
+        "decision_id": "07c95009c1b03dc4",
+        "kind": "sanctions_screening",
+        "records_bound": 0,
+        "records_offered": 0,
+        "state": null,
+        "status": "REJECTED",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Escalate",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "d7c1bd52e7284cf4ca210f3b1ca9c924e5252b50100fba1370e4a61993313fa7",
+   "prev_hash": "d74bbd228f195bc54312e36decc3658b2ecfbec822184df5d086b5a813bdc9b6",
+   "seq": 5
+  },
+  {
+   "body": {
+    "basis": "trace steps not independently corroborated: ['s2', 's3']",
+    "corroboration": [
+     {
+      "decision_id": "7a369dea734f1281",
+      "kind": "kyc_check",
+      "records_bound": 1,
+      "records_offered": 1,
+      "state": "Probabilistic Assessment",
+      "status": "DEGRADED",
+      "step_id": "s2"
+     },
+     {
+      "decision_id": "538afda0476e532c",
+      "kind": "sanctions_screening",
+      "records_bound": 1,
+      "records_offered": 1,
+      "state": "Probabilistic Assessment",
+      "status": "DEGRADED",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 7000,
+      "counterparty": "SUPPLIER-0077",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0077",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0077",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0077",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "yVtr1hf49G8oOYwQ9y699dNGqBoXB6neCJdyS5hQU0Cgu/FMnHY3zTN7OlM0BIC5U8PInPVPdtt+h5ijwDBpAw==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-007",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "80f9d1fedcdbe8c2a2b3e8bf65913f09eb767698420e9e1fa8dc7243dd6e236b",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Escalate",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "decision_id": "7a369dea734f1281",
+        "kind": "kyc_check",
+        "records_bound": 1,
+        "records_offered": 1,
+        "state": "Probabilistic Assessment",
+        "status": "DEGRADED",
+        "step_id": "s2"
+       },
+       {
+        "decision_id": "538afda0476e532c",
+        "kind": "sanctions_screening",
+        "records_bound": 1,
+        "records_offered": 1,
+        "state": "Probabilistic Assessment",
+        "status": "DEGRADED",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Escalate",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "8adf8411ecfd58085f5ce1631c5878780398dfc422392ebf0080f0c52c0ee1d2",
+   "prev_hash": "d7c1bd52e7284cf4ca210f3b1ca9c924e5252b50100fba1370e4a61993313fa7",
+   "seq": 6
+  },
+  {
+   "body": {
+    "basis": "amount 60000.0 above autonomous threshold 50000",
+    "corroboration": [
+     {
+      "decision_id": "83459a3b36173661",
+      "kind": "kyc_check",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s2"
+     },
+     {
+      "decision_id": "585c5314650f1878",
+      "kind": "sanctions_screening",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 60000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "mEcoaw4JF/2F8AbFh+0mDDD/c4VDQyRBXAiRGY/Ss7/pOQEv9r7nzd9X03Lj1BVfukNRijnOd2EQazOYh9zGCA==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-008",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "355ecef08f0f3a58898c2545f5b6fd7baa5f5da7a1f98020754515f01d76dd30",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Escalate",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION",
+     "CTRL-ESCALATE-THRESHOLD"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "decision_id": "83459a3b36173661",
+        "kind": "kyc_check",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s2"
+       },
+       {
+        "decision_id": "585c5314650f1878",
+        "kind": "sanctions_screening",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Escalate",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "8dea200285837a009e2354674b0c6139315049824a9ee9d8ebad633b18205b3d",
+   "prev_hash": "8adf8411ecfd58085f5ce1631c5878780398dfc422392ebf0080f0c52c0ee1d2",
+   "seq": 7
+  }
+ ],
+ "signature": "AgONP5JTBfLN6YY2p573ogy4vZx41vmm2FSxM9URpDYDDyU+M8ZK0KwvEZnhLSNFKCapygbgPJKJ1oslfdO8Bg==",
+ "statement": {
+  "entries": 8,
+  "exported_at": "2026-10-12T09:00:00Z",
+  "head": "8dea200285837a009e2354674b0c6139315049824a9ee9d8ebad633b18205b3d",
+  "institution": "Example Bank Ltd"
+ }
+}
