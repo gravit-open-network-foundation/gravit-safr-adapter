@@ -5,7 +5,8 @@
     "basis": "first payment by this agent to 'SUPPLIER-0042'",
     "corroboration": [
      {
-      "decision_id": "58cd7d648b701890",
+      "contradicted_by": [],
+      "decision_id": "8a8f79e5ceb53064",
       "kind": "kyc_check",
       "records_bound": 2,
       "records_offered": 2,
@@ -14,7 +15,8 @@
       "step_id": "s2"
      },
      {
-      "decision_id": "ec0c5a7383bed07b",
+      "contradicted_by": [],
+      "decision_id": "7bb3d956a9bbd114",
       "kind": "sanctions_screening",
       "records_bound": 2,
       "records_offered": 2,
@@ -104,7 +106,8 @@
       "stage": "gravit_corroboration",
       "steps": [
        {
-        "decision_id": "58cd7d648b701890",
+        "contradicted_by": [],
+        "decision_id": "8a8f79e5ceb53064",
         "kind": "kyc_check",
         "records_bound": 2,
         "records_offered": 2,
@@ -113,7 +116,8 @@
         "step_id": "s2"
        },
        {
-        "decision_id": "ec0c5a7383bed07b",
+        "contradicted_by": [],
+        "decision_id": "7bb3d956a9bbd114",
         "kind": "sanctions_screening",
         "records_bound": 2,
         "records_offered": 2,
@@ -129,7 +133,7 @@
      }
     ]
    },
-   "entry_hash": "087a4cbda974b41521da912efb2cfb613b80d8075cf87ba333cf84c2b3a2ae50",
+   "entry_hash": "5d1c21552807286c16120c96e18928e466c06fdf29b84d0866e7883970060cc6",
    "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
    "seq": 0
   },
@@ -138,7 +142,8 @@
     "basis": "within mandate; every required check independently corroborated",
     "corroboration": [
      {
-      "decision_id": "15f91b2ae29b1934",
+      "contradicted_by": [],
+      "decision_id": "165187397734effc",
       "kind": "kyc_check",
       "records_bound": 2,
       "records_offered": 2,
@@ -147,7 +152,8 @@
       "step_id": "s2"
      },
      {
-      "decision_id": "8599034910bf6748",
+      "contradicted_by": [],
+      "decision_id": "b922ff31e852acb8",
       "kind": "sanctions_screening",
       "records_bound": 2,
       "records_offered": 2,
@@ -236,7 +242,8 @@
       "stage": "gravit_corroboration",
       "steps": [
        {
-        "decision_id": "15f91b2ae29b1934",
+        "contradicted_by": [],
+        "decision_id": "165187397734effc",
         "kind": "kyc_check",
         "records_bound": 2,
         "records_offered": 2,
@@ -245,7 +252,8 @@
         "step_id": "s2"
        },
        {
-        "decision_id": "8599034910bf6748",
+        "contradicted_by": [],
+        "decision_id": "b922ff31e852acb8",
         "kind": "sanctions_screening",
         "records_bound": 2,
         "records_offered": 2,
@@ -261,8 +269,8 @@
      }
     ]
    },
-   "entry_hash": "57d9d4adae0242125c5a90820b48565f77561c878153b20779cd770a6e0d21d1",
-   "prev_hash": "087a4cbda974b41521da912efb2cfb613b80d8075cf87ba333cf84c2b3a2ae50",
+   "entry_hash": "e761ea16800573f79ef3d48bb80c431e7e45bd8d6e344d20240d9147a8cdb4ef",
+   "prev_hash": "5d1c21552807286c16120c96e18928e466c06fdf29b84d0866e7883970060cc6",
    "seq": 1
   },
   {
@@ -347,8 +355,8 @@
      }
     ]
    },
-   "entry_hash": "dd7f4b45e75162a564b6ae16455e7481962018e6cae9676b7e7634d1efd045e8",
-   "prev_hash": "57d9d4adae0242125c5a90820b48565f77561c878153b20779cd770a6e0d21d1",
+   "entry_hash": "467b943cdbdbcd7e8c2c92d086738c4fc908a7a3bfde700a9d7ef6bb687cd468",
+   "prev_hash": "e761ea16800573f79ef3d48bb80c431e7e45bd8d6e344d20240d9147a8cdb4ef",
    "seq": 2
   },
   {
@@ -410,8 +418,8 @@
      }
     ]
    },
-   "entry_hash": "abaf2a9f21829c3fdd167dd03c3f0ac7a4840885c7a8aba1e8e4f14e2a06b093",
-   "prev_hash": "dd7f4b45e75162a564b6ae16455e7481962018e6cae9676b7e7634d1efd045e8",
+   "entry_hash": "1645f0e9ca3276d0241226230ffe1efc80ea73412a1add0b7027a8f496295a39",
+   "prev_hash": "467b943cdbdbcd7e8c2c92d086738c4fc908a7a3bfde700a9d7ef6bb687cd468",
    "seq": 3
   },
   {
@@ -473,8 +481,8 @@
      }
     ]
    },
-   "entry_hash": "d74bbd228f195bc54312e36decc3658b2ecfbec822184df5d086b5a813bdc9b6",
-   "prev_hash": "abaf2a9f21829c3fdd167dd03c3f0ac7a4840885c7a8aba1e8e4f14e2a06b093",
+   "entry_hash": "398c977d7bea77aa11dd4a06932fddf656416ca28f2197f37ad067b48eb353e6",
+   "prev_hash": "1645f0e9ca3276d0241226230ffe1efc80ea73412a1add0b7027a8f496295a39",
    "seq": 4
   },
   {
@@ -482,7 +490,8 @@
     "basis": "trace steps not independently corroborated: ['s2', 's3']",
     "corroboration": [
      {
-      "decision_id": "a404e9abf45456b8",
+      "contradicted_by": [],
+      "decision_id": "d6f06e076df7e122",
       "kind": "kyc_check",
       "records_bound": 0,
       "records_offered": 0,
@@ -491,7 +500,8 @@
       "step_id": "s2"
      },
      {
-      "decision_id": "07c95009c1b03dc4",
+      "contradicted_by": [],
+      "decision_id": "c4b78c910a4358b0",
       "kind": "sanctions_screening",
       "records_bound": 0,
       "records_offered": 0,
@@ -580,7 +590,8 @@
       "stage": "gravit_corroboration",
       "steps": [
        {
-        "decision_id": "a404e9abf45456b8",
+        "contradicted_by": [],
+        "decision_id": "d6f06e076df7e122",
         "kind": "kyc_check",
         "records_bound": 0,
         "records_offered": 0,
@@ -589,7 +600,8 @@
         "step_id": "s2"
        },
        {
-        "decision_id": "07c95009c1b03dc4",
+        "contradicted_by": [],
+        "decision_id": "c4b78c910a4358b0",
         "kind": "sanctions_screening",
         "records_bound": 0,
         "records_offered": 0,
@@ -605,8 +617,8 @@
      }
     ]
    },
-   "entry_hash": "d7c1bd52e7284cf4ca210f3b1ca9c924e5252b50100fba1370e4a61993313fa7",
-   "prev_hash": "d74bbd228f195bc54312e36decc3658b2ecfbec822184df5d086b5a813bdc9b6",
+   "entry_hash": "5d9accc9ab5dac64b3453f5c9b940d6e98a710494afc0da7f4d6eb670e9afd1e",
+   "prev_hash": "398c977d7bea77aa11dd4a06932fddf656416ca28f2197f37ad067b48eb353e6",
    "seq": 5
   },
   {
@@ -614,7 +626,8 @@
     "basis": "trace steps not independently corroborated: ['s2', 's3']",
     "corroboration": [
      {
-      "decision_id": "7a369dea734f1281",
+      "contradicted_by": [],
+      "decision_id": "c906bc3fe16e0eab",
       "kind": "kyc_check",
       "records_bound": 1,
       "records_offered": 1,
@@ -623,7 +636,8 @@
       "step_id": "s2"
      },
      {
-      "decision_id": "538afda0476e532c",
+      "contradicted_by": [],
+      "decision_id": "f75f3652d484b39f",
       "kind": "sanctions_screening",
       "records_bound": 1,
       "records_offered": 1,
@@ -712,7 +726,8 @@
       "stage": "gravit_corroboration",
       "steps": [
        {
-        "decision_id": "7a369dea734f1281",
+        "contradicted_by": [],
+        "decision_id": "c906bc3fe16e0eab",
         "kind": "kyc_check",
         "records_bound": 1,
         "records_offered": 1,
@@ -721,7 +736,8 @@
         "step_id": "s2"
        },
        {
-        "decision_id": "538afda0476e532c",
+        "contradicted_by": [],
+        "decision_id": "f75f3652d484b39f",
         "kind": "sanctions_screening",
         "records_bound": 1,
         "records_offered": 1,
@@ -737,8 +753,8 @@
      }
     ]
    },
-   "entry_hash": "8adf8411ecfd58085f5ce1631c5878780398dfc422392ebf0080f0c52c0ee1d2",
-   "prev_hash": "d7c1bd52e7284cf4ca210f3b1ca9c924e5252b50100fba1370e4a61993313fa7",
+   "entry_hash": "595e8dbf46f62ae90686150d2e95dc351699ff682209024acbe3117f964fc869",
+   "prev_hash": "5d9accc9ab5dac64b3453f5c9b940d6e98a710494afc0da7f4d6eb670e9afd1e",
    "seq": 6
   },
   {
@@ -746,7 +762,8 @@
     "basis": "amount 60000.0 above autonomous threshold 50000",
     "corroboration": [
      {
-      "decision_id": "83459a3b36173661",
+      "contradicted_by": [],
+      "decision_id": "31faa4bb7753000c",
       "kind": "kyc_check",
       "records_bound": 2,
       "records_offered": 2,
@@ -755,7 +772,8 @@
       "step_id": "s2"
      },
      {
-      "decision_id": "585c5314650f1878",
+      "contradicted_by": [],
+      "decision_id": "f7aca7d6dac9d315",
       "kind": "sanctions_screening",
       "records_bound": 2,
       "records_offered": 2,
@@ -845,7 +863,8 @@
       "stage": "gravit_corroboration",
       "steps": [
        {
-        "decision_id": "83459a3b36173661",
+        "contradicted_by": [],
+        "decision_id": "31faa4bb7753000c",
         "kind": "kyc_check",
         "records_bound": 2,
         "records_offered": 2,
@@ -854,7 +873,8 @@
         "step_id": "s2"
        },
        {
-        "decision_id": "585c5314650f1878",
+        "contradicted_by": [],
+        "decision_id": "f7aca7d6dac9d315",
         "kind": "sanctions_screening",
         "records_bound": 2,
         "records_offered": 2,
@@ -870,16 +890,292 @@
      }
     ]
    },
-   "entry_hash": "8dea200285837a009e2354674b0c6139315049824a9ee9d8ebad633b18205b3d",
-   "prev_hash": "8adf8411ecfd58085f5ce1631c5878780398dfc422392ebf0080f0c52c0ee1d2",
+   "entry_hash": "86c4ff05a5b56ed464e01074793e5bdad3f90eb12d4020659d138a4a6eb84153",
+   "prev_hash": "595e8dbf46f62ae90686150d2e95dc351699ff682209024acbe3117f964fc869",
    "seq": 7
+  },
+  {
+   "body": {
+    "basis": "a system signed a failed check for trace steps: ['s2']",
+    "corroboration": [
+     {
+      "contradicted_by": [
+       "kyc-provider:env-009/s2"
+      ],
+      "decision_id": "6988423e06b88688",
+      "kind": "kyc_check",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Probabilistic Assessment",
+      "status": "DEGRADED",
+      "step_id": "s2"
+     },
+     {
+      "contradicted_by": [],
+      "decision_id": "d9029afad0f3218e",
+      "kind": "sanctions_screening",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Verified Fact",
+      "status": "SUCCESS",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 9000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "Mkg4nlKeHWxoZX97qdEyW0zKRHK0sXrv7G334HyKi5q91DgLBuXc3S4e00QzBg6vtW4DY4C4RLsSRG97Z3AJBQ==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-009",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "fd85b1e2d983ce3ba9d84a58a6cc9cabc97016989ebd4a2063cce6fd4b5970c2",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Escalate",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "contradicted_by": [
+         "kyc-provider:env-009/s2"
+        ],
+        "decision_id": "6988423e06b88688",
+        "kind": "kyc_check",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Probabilistic Assessment",
+        "status": "DEGRADED",
+        "step_id": "s2"
+       },
+       {
+        "contradicted_by": [],
+        "decision_id": "d9029afad0f3218e",
+        "kind": "sanctions_screening",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Verified Fact",
+        "status": "SUCCESS",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Escalate",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "357221b7a450a9a6a39c2b2b7a512f5482a9c57c395fbc14402b34e318d26384",
+   "prev_hash": "86c4ff05a5b56ed464e01074793e5bdad3f90eb12d4020659d138a4a6eb84153",
+   "seq": 8
+  },
+  {
+   "body": {
+    "basis": "trace steps not independently corroborated: ['s2', 's3']",
+    "corroboration": [
+     {
+      "contradicted_by": [],
+      "decision_id": "416dd6badfc881cd",
+      "kind": "kyc_check",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Probabilistic Assessment",
+      "status": "DEGRADED",
+      "step_id": "s2"
+     },
+     {
+      "contradicted_by": [],
+      "decision_id": "bf07d7a93f177570",
+      "kind": "sanctions_screening",
+      "records_bound": 2,
+      "records_offered": 2,
+      "state": "Probabilistic Assessment",
+      "status": "DEGRADED",
+      "step_id": "s3"
+     }
+    ],
+    "envelope": {
+     "action": {
+      "amount": 9000,
+      "counterparty": "SUPPLIER-0042",
+      "currency": "SGD",
+      "type": "payment"
+     },
+     "action_trace": [
+      {
+       "detail": "invoice for SUPPLIER-0042",
+       "kind": "invoice_lookup",
+       "step_id": "s1"
+      },
+      {
+       "detail": "KYC status of SUPPLIER-0042",
+       "kind": "kyc_check",
+       "step_id": "s2"
+      },
+      {
+       "detail": "screen SUPPLIER-0042",
+       "kind": "sanctions_screening",
+       "step_id": "s3"
+      }
+     ],
+     "agent_id": "treasury-agent-7",
+     "agent_signature": "J4eAFh8aYxBnxM34IvXgwuQQN6v5GRFVuRsKUBsFkKS+S4crAX98tvu8DcSmLGc7RxyEcN7B6QzmhRCF/P0dBQ==",
+     "context": {
+      "account": "OPS-SGD-01"
+     },
+     "envelope_id": "env-010",
+     "mandate_id": "treasury-payments-v3",
+     "session_id": "sess-2026-10-12-01"
+    },
+    "envelope_sha3": "38eef6c4712362dcca6d6957ca7d37038b587b0825edb8fe1b70417af863209e",
+    "mandate": {
+     "allowed_actions": [
+      "payment"
+     ],
+     "allowed_counterparties": [
+      "SUPPLIER-0042",
+      "SUPPLIER-0077"
+     ],
+     "escalate_above": 50000,
+     "mandate_id": "treasury-payments-v3",
+     "mandate_sha3": "c3324c456edfcd082df64a0a10353702079ed31df0fa4b88b2158466013f14b5",
+     "max_amount": 100000,
+     "observe_new_counterparty": true,
+     "required_checks": [
+      "kyc_check",
+      "sanctions_screening"
+     ],
+     "version": "3.0"
+    },
+    "outcome": "Escalate",
+    "rules_applied": [
+     "CTRL-ACTION-TYPE",
+     "CTRL-MAX-AMOUNT",
+     "CTRL-COUNTERPARTY",
+     "GRAVIT-TRACE-CORROBORATION"
+    ],
+    "stages": [
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "received"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "ok": true,
+      "stage": "agent_identity"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "mandate_found": true,
+      "stage": "controls_repository"
+     },
+     {
+      "at": "2026-10-12T09:00:00Z",
+      "stage": "gravit_corroboration",
+      "steps": [
+       {
+        "contradicted_by": [],
+        "decision_id": "416dd6badfc881cd",
+        "kind": "kyc_check",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Probabilistic Assessment",
+        "status": "DEGRADED",
+        "step_id": "s2"
+       },
+       {
+        "contradicted_by": [],
+        "decision_id": "bf07d7a93f177570",
+        "kind": "sanctions_screening",
+        "records_bound": 2,
+        "records_offered": 2,
+        "state": "Probabilistic Assessment",
+        "status": "DEGRADED",
+        "step_id": "s3"
+       }
+      ]
+     },
+     {
+      "outcome": "Escalate",
+      "stage": "disposition"
+     }
+    ]
+   },
+   "entry_hash": "97b5f10ae0564964514c4522a14fc483b5ab33c1665f3e47afc3f021c7d05281",
+   "prev_hash": "357221b7a450a9a6a39c2b2b7a512f5482a9c57c395fbc14402b34e318d26384",
+   "seq": 9
   }
  ],
- "signature": "AgONP5JTBfLN6YY2p573ogy4vZx41vmm2FSxM9URpDYDDyU+M8ZK0KwvEZnhLSNFKCapygbgPJKJ1oslfdO8Bg==",
+ "signature": "9NG8SsVYSfN1IYXDUHr7vfsd8RZdsd/RevfG8G1yWtFlAudimwhE5bPcBUeychHgKnPgQJcBgigGhMQUCGgxCQ==",
  "statement": {
-  "entries": 8,
+  "entries": 10,
   "exported_at": "2026-10-12T09:00:00Z",
-  "head": "8dea200285837a009e2354674b0c6139315049824a9ee9d8ebad633b18205b3d",
+  "head": "97b5f10ae0564964514c4522a14fc483b5ab33c1665f3e47afc3f021c7d05281",
   "institution": "Example Bank Ltd"
  }
 }

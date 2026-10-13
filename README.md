@@ -21,8 +21,8 @@ shows *one way* to make two of its hardest requirements independently verifiable
 ## Run
 
 ```bash
-make setup PYTHON=python3.12   # installs the Gravit Verifier at tag v0.5.0
-make run                       # 8 scenarios + offline audit -> results/
+make setup PYTHON=python3.12   # installs the Gravit Verifier at tag v0.6.0
+make run                       # 10 scenarios + offline audit -> results/
 make test
 ```
 
@@ -36,6 +36,13 @@ make test
 | 6 | Trace claims checks that no system recorded (fabricated trace) | **Escalate** |
 | 7 | Each check confirmed by only one source | **Escalate** |
 | 8 | Above the autonomous threshold, checks corroborated | **Escalate** |
+| 9 | KYC provider signs a failed check (`result=false`) | **Escalate** (check failed) |
+| 10 | Checks signed without a verdict (`result=null`) | **Escalate** |
+
+Scenarios 9 and 10 were added after an external reviewer showed that with verifier v0.5.0 a
+signed `false` or `null` still led to Auto-Execute: the verifier ignored the signed result.
+Fixed in verifier v0.6.0 (`CANON-RES-012`, `docs/signed-result.md` there). Escalating a failed
+check rather than denying it is a configurable policy choice.
 
 Then: the exported log verifies offline; a copy in which one decision was rewritten afterwards,
 or one entry deleted, fails. CI regenerates `results/` and fails on any byte change.

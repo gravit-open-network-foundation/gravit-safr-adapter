@@ -4,8 +4,8 @@
   "reason": "chain broken at entry 5"
  },
  "auditor_offline_check": {
-  "entries": 8,
-  "head": "8dea200285837a009e2354674b0c6139315049824a9ee9d8ebad633b18205b3d",
+  "entries": 10,
+  "head": "97b5f10ae0564964514c4522a14fc483b5ab33c1665f3e47afc3f021c7d05281",
   "ok": true
  },
  "scenarios": [
@@ -56,6 +56,18 @@
    "envelope": "env-008",
    "outcome": "Escalate",
    "scenario": "Above the autonomous threshold, checks corroborated"
+  },
+  {
+   "basis": "a system signed a failed check for trace steps: ['s2']",
+   "envelope": "env-009",
+   "outcome": "Escalate",
+   "scenario": "KYC provider signs a failed check (result=false)"
+  },
+  {
+   "basis": "trace steps not independently corroborated: ['s2', 's3']",
+   "envelope": "env-010",
+   "outcome": "Escalate",
+   "scenario": "Checks signed without a verdict (result=null)"
   }
  ]
 }
