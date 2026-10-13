@@ -39,7 +39,7 @@ make test
 | 9 | KYC provider signs a failed check (`result=false`) | **Escalate** (check failed) |
 | 10 | Checks signed without a verdict (`result=null`) | **Escalate** |
 
-Scenarios 9 and 10 were added after an external reviewer showed that with verifier v0.5.0 a
+Scenarios 9 and 10 were added after Iman Schrock (EMILIA Protocol) showed that with verifier v0.5.0 a
 signed `false` or `null` still led to Auto-Execute: the verifier ignored the signed result.
 Fixed in verifier v0.6.0 (`CANON-RES-012`, `docs/signed-result.md` there). Escalating a failed
 check rather than denying it is a configurable policy choice.
