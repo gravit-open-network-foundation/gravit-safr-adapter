@@ -40,12 +40,14 @@ def envelope(eid, amount, cp, agent="treasury-agent-7", trace=None, sign_as=None
     return env
 
 
-def records(env, producers_by_kind):
-    """System records confirming the trace steps (bound to the exact step content)."""
+def records(env, producers_by_kind, results=None):
+    """Signed system records on the trace steps (bound to the exact step content).
+    `results` maps a producer to its verdict (default True = check passed)."""
     out = {}
     for step in env.action_trace:
         art, h = f"{env.envelope_id}/{step['step_id']}", sha3({"envelope": env.envelope_id, "step": step})
-        out[step["step_id"]] = [system_record(p, art, h, NOW) for p in producers_by_kind.get(step["kind"], [])]
+        out[step["step_id"]] = [system_record(p, art, h, NOW, result=(results or {}).get(p, True))
+                                for p in producers_by_kind.get(step["kind"], [])]
     return out
 
 
@@ -72,6 +74,12 @@ def scenarios():
     yield "Each check confirmed by only one source", e, rec
     e = envelope("env-008", 60_000, "SUPPLIER-0042")
     yield "Above the autonomous threshold, checks corroborated", e, records(e, BOTH)
+    # Signed verdicts (verifier v0.6.0, CANON-RES-012). Repeat payments, so not novel.
+    e = envelope("env-009", 9_000, "SUPPLIER-0042")
+    yield "KYC provider signs a failed check (result=false)", e, records(e, BOTH, {"kyc-provider": False})
+    e = envelope("env-010", 9_000, "SUPPLIER-0042")
+    yield "Checks signed without a verdict (result=null)", e, records(e, BOTH, {p: None for p in
+                                                                               ("kyc-provider", "sanctions-screening", "bank-tool-gateway")})
 
 
 def main() -> int:

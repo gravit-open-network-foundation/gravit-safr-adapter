@@ -13,7 +13,8 @@ def test_expected_outcomes():
     from pathlib import Path
     s = json.loads((Path(__file__).resolve().parent.parent / "results" / "summary.json").read_text())
     assert [r["outcome"] for r in s["scenarios"]] == [
-        "Observe", "Auto-Execute", "Deny", "Deny", "Deny", "Escalate", "Escalate", "Escalate"]
+        "Observe", "Auto-Execute", "Deny", "Deny", "Deny", "Escalate", "Escalate", "Escalate",
+        "Escalate", "Escalate"]
     assert s["auditor_offline_check"]["ok"] and not s["auditor_check_of_tampered_copy"]["ok"]
 
 

@@ -104,10 +104,12 @@ class Gateway:
         d = self.kernel.verify(VerificationRequest(
             artifact_id=artifact, claimed_state=EpistemicState.VERIFIED_FACT, evidence=bound,
             context={"evaluation_time": now, "freshness_max_age_seconds": 300, "high_impact": True}))
+        verdicts = d.convergence_metrics.get("CANON-RES-012", {})  # signed results (verifier >= v0.6.0)
         return {"step_id": step["step_id"], "kind": step["kind"],
                 "state": d.final_epistemic_state.value if d.final_epistemic_state else None,
                 "status": d.status.value, "decision_id": d.decision_id,
-                "records_bound": len(bound), "records_offered": len(records)}
+                "records_bound": len(bound), "records_offered": len(records),
+                "contradicted_by": verdicts.get("contradicting_records", [])}
 
     # -- the checkpoint -------------------------------------------------------
 
@@ -142,9 +144,11 @@ class Gateway:
         corroboration = [self.corroborate(env, s, system_records.get(s["step_id"], []), now) for s in checks]
         stages.append({"stage": "gravit_corroboration", "at": now, "steps": corroboration})
         rules.append("GRAVIT-TRACE-CORROBORATION")
-        unverified = [c["step_id"] for c in corroboration if c["state"] != "Verified Fact"]
-        if missing or unverified:
+        contradicted = [c["step_id"] for c in corroboration if c["contradicted_by"]]
+        unverified = [c["step_id"] for c in corroboration if c["state"] != "Verified Fact" and not c["contradicted_by"]]
+        if missing or contradicted or unverified:
             why = (f"required checks missing from trace: {missing}; " if missing else "") + \
+                  (f"a system signed a failed check for trace steps: {contradicted}; " if contradicted else "") + \
                   (f"trace steps not independently corroborated: {unverified}" if unverified else "")
             return self._record(entry, stages, "Escalate", rules, why.strip("; "), mandate, corroboration)
 

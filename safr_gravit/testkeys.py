@@ -44,9 +44,11 @@ def registry() -> VerifierRegistry:
     return VerifierRegistry.from_bytes(reg, sigs, tr)
 
 
-def system_record(producer: str, artifact_id: str, step_hash: str, timestamp: str, theta: float = 0.95) -> EvidenceRecord:
-    """A signed, system-generated record confirming one step of an action trace."""
-    r = EvidenceRecord(record_id=f"{producer}:{artifact_id}", theta=theta, result=True, verifier_id=producer,
+def system_record(producer: str, artifact_id: str, step_hash: str, timestamp: str, theta: float = 0.95,
+                  result=True) -> EvidenceRecord:
+    """A signed, system-generated record on one step of an action trace. `result` is the
+    producer's verdict: True = check passed, False = check failed, None = no verdict."""
+    r = EvidenceRecord(record_id=f"{producer}:{artifact_id}", theta=theta, result=result, verifier_id=producer,
                        timestamp=timestamp, provenance=OPERATORS.get(producer, "unregistered"),
                        integrity_hash=step_hash, key_id=key_id_for(pub(producer)))
     r.signature = base64.b64encode(key(producer).sign(signing_message(artifact_id, r))).decode()
