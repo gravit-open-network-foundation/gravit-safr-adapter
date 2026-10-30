@@ -21,7 +21,7 @@ shows *one way* to make two of its hardest requirements independently verifiable
 ## Run
 
 ```bash
-make setup PYTHON=python3.12   # installs the Gravit Verifier at tag v0.6.0
+make setup PYTHON=python3.12   # installs the Gravit Verifier at tag v0.7.0
 make run                       # 10 scenarios + offline audit -> results/
 make test
 ```
